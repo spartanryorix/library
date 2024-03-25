@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center">Library</h1>
+    <p class='lead text-center'>Enter your book and it will be inserted into our database.</p><br>
+        <form method="POST" action="/">
+            <div class="mb-3 col-md-3 ps-4">
+                <label for="bookname" class="form-label text-left">Book Name</label>
+                <input type="text" class="form-control" name="bookname" id="bookname" required>
+                <span id="bookname-field" class="form-text">
+                    Enter the name of the book you want to add.
+                </span><br>
+                <button type="submit" class="btn btn-primary mt-1" value="Submit">Submit</button>
+            </div>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="mb-3 col-md-3 ps-4 text-center lead">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
