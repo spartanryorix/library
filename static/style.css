@@ -1,0 +1,19 @@
+.table{
+    width: 75%;
+}
+.table-custom thead th {
+    background-color: #b6cde0; 
+    color: #000000; 
+}
+
+.table-custom tbody tr:nth-child(even) {
+    background-color: #f8f9fa; 
+}
+
+.table-custom tbody tr:nth-child(odd) {
+    background-color: #e9ecef; 
+}
+
+.table-custom tbody tr:hover {
+    background-color: #c8d6e5; 
+}
